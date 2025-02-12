@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro rinconcito 💕</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-pink-50 flex flex-col min-h-screen justify-between">
+  <main class="flex-grow relative">
+    <div class="relative">
+      <img 
+        src="/img/fondoJulia.jpg" 
+        alt="Imagen romántica" 
+        class="w-full h-screen object-cover"
+      />
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+        <h1 class="text-5xl font-bold drop-shadow-lg text-center titulo">¡CADA PÁGINA, UN RECUERDO CONTIGO!</h1>
+        <p class="text-xl mt-4 drop-shadow-lg text-center parrafo">Muevete por cada sección y descubre cada rinconcito. Solo aquellos con privilegios podrán acceder.</p>
+        <a href="/pages/misFavs.html" class="mt-6 bg-pink-600 hover:bg-pink-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">Mis Favoritos</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="fixed bottom-0 left-0 w-full bg-pink-100 shadow-lg p-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="text-pink-700 font-bold text-lg">💖 Navega por aquí</div>
+      
+      <button id="menu-button" class="lg:hidden focus:outline-none text-pink-600" aria-label="Abrir menú">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden lg:flex space-x-6">
+        <a href="/pages/contador.html" class="text-pink-700 font-medium hover:text-pink-900 transition duration-300 heart-beat">Juntitos</a>
+        <a href="/pages/paUsted.html" class="text-pink-700 font-medium hover:text-pink-900 transition duration-300 heart-beat">Para mi niña</a>
+        <a href="/pages/importante.html" class="text-pink-700 font-medium hover:text-pink-900 transition duration-300 heart-beat">Momentos junto a tí</a>
+        <a href="/pages/objetivos.html" class="text-pink-700 font-medium hover:text-pink-900 transition duration-300 heart-beat">Nuestro futuro</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="hidden mt-4 bg-pink-200 rounded-lg p-4">
+      <a href="/pages/contador.html" class="block text-pink-700 font-medium py-2 hover:text-pink-900 transition duration-300">Juntitos</a>
+      <a href="/pages/paUsted.html" class="block text-pink-700 font-medium py-2 hover:text-pink-900 transition duration-300">Para mi niña</a>
+      <a href="/pages/importante.html" class="block text-pink-700 font-medium py-2 hover:text-pink-900 transition duration-300">Momentos junto a tí</a>
+      <a href="/pages/objetivos.html" class="block text-pink-700 font-medium py-2 hover:text-pink-900 transition duration-300">Nuestro futuro</a>
+    </div>
+    <script src="main.js"></script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+body {
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.cartas {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: flotar 4s linear infinite;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+#content {
+    display: none;
+}
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+h2 {
+    color: #d6336c;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #d6336c;
+}
+
+button {
+    background-color: #d6336c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b02557;
+}
+
+ .texto {
+    border-right: 2px solid black;   /*Cursor*/
+    white-space: nowrap;
+    overflow: hidden;
+    animation: escribir 5s steps(2000) 1s forwards, parpadeo 0.8s step-end infinite;
+    -webkit-animation: escribir 5s steps(2000) 1s forwards, parpadeo 0.8s step-end infinite;
+    color: black;
+}
+
+p{
+    color: black;
+}
+
+@keyframes escribir {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes parpadeo {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.sobre {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    max-width: 95%;
+    background-color: #ff3366;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+  /* Solapa superior del sobre */
+.solapa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #ff6699;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transition: transform 0.5s ease;
+}
+/* Contenido de la carta */
+.carta {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: calc(100% - 20px); /* Ajuste para evitar corte */
+  height: calc(100% - 80px); /* Margen para que no se solape con la solapa */
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: justify;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 0.5s ease;
+  overflow-y: auto;
+}
+.carta h1 {
+  color: #ff3366;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.carta p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.boton {
+  background-color: #ff3366;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  align-self: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.boton:hover {
+  background-color: #e62e5c;
+}
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 500px) {
+    #content{
+        width: 350px;
+        height: 350px;
+    }
+.sobre {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+  }
+.carta p {
+    font-size: 14px;
+  }
+.carta h1 {
+    font-size: 20px;
+}
+}
+/* Responsividad para pantallas grandes */
+@media (min-width: 768px) {
+    .sobre {
+    width: 500px;
+    height: 600px;
+    }
+    .carta h1 {
+    font-size: 28px;
+    }
+    .carta p {
+    font-size: 18px;
+    }
+    .boton {
+    font-size: 16px;
+    padding: 15px 30px;
+    }
+}
+/* Para pantallas más grandes aún */
+@media (min-width: 1200px) {
+  .sobre {
+    width: 600px;
+    height: 700px;
+  }
+  .carta h1 {
+    font-size: 32px;
+  }
+  .carta p {
+    font-size: 20px;
+  }
+}

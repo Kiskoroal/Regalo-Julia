@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/importante.css">
+  <title>Galería Romántica</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .photo-card {
+      transition: transform 0.3s ease-in-out;
+    }
+    .photo-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+<div class="cont-login" id="contenedorLogin">
+  <div id="login">
+      <h2>💖 Ingrese la contraseña para acceder 💖</h2>
+      <p>Este contenido es sólo para privilegiados, para poder acceder tendrás que saber donde fue nuestro viaje juntos.</p>
+      <input type="password" id="password" placeholder="Contraseña">
+      <button onclick="checkPassword()">💘 Ingresar 💘</button>
+  </div>
+</div>
+<main class="hidden container mx-auto p-8" id="content">
+    <h1 class="text-4xl font-bold text-center text-pink-700 mb-8">TODAS MIS FOTOS FAVORITAS Y SU RAZÓN</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="photo-card bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="/img/fav1.jpg" alt="Foto romántica 1" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-pink-700 font-medium">Adoro todas estas fotos pero esta es especial, estabas super guapa y disfrutando de tu viaje. Me encanta verla porque me da alegría y recuerdos de verano.</p>
+        </div>
+      </div>
+      <div class="photo-card bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="/img/fav2.jpg" alt="Foto romántica 2" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-pink-700 font-medium">Esta foto me encanta por la combinación de colores y lo extremadamente guapa que estas. Verla me da alegría y me hace sentirme orgulloso de la niña que tengo junto a mí.</p>
+        </div>
+      </div>
+      <div class="photo-card bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="/img/fav3.jpg" alt="Foto romántica 3" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-pink-700 font-medium">Esta foto sabes que es mi debilidad ese moreno de verano me trae recuerdos super bonitos. Además, me encanta como me vas documentando tus viajes con ilusión y como me explicas cada detalle que vas aprendiendo, me haces muy feliz con estos detalles de verdad. Gracias!!!!</p>
+        </div>
+      </div>
+      <div class="photo-card bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="/img/fav4.jpg" alt="Foto romántica 4" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-pink-700 font-medium">Mis fotos favoritas mientras estamos comiendo. Me encanta hacerte estas fotos porque disfruto muchísimo contigo y simplemente me hace feliz.</p>
+        </div>
+      </div>
+    </div>
+</main>
+<script src="/scripts/misFavs.js"></script>
+</body>
+</html>

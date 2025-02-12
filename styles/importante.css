@@ -1,0 +1,188 @@
+.zona-imagenes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.foto {
+    width: 420px;
+    height: 420px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease; 
+}
+
+.foto .cara {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.foto .frente {
+    background-color: #f5f5f5;
+}
+
+.foto .reverso {
+    background: linear-gradient(70deg, magenta, aquamarine);
+    color: #fff;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-size: 18px;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.foto.girar {
+    transform: rotateY(180deg);
+}
+
+h2{
+    text-align: center;
+}
+
+.cont-login div p{
+    margin: 1em;
+}
+
+/* Login */
+
+#content{
+    display: none;
+}
+
+#login {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+h2 {
+    color: #d6336c;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #d6336c;
+}
+
+button {
+    background-color: #d6336c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b02557;
+}
+
+.cont-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.objetivos-card{
+    width: 80vh;
+    margin: 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background: whitesmoke;
+    padding: 1em;
+    border-radius: 1.5em;
+    -webkit-border-radius: 1.5em;
+    -moz-border-radius: 1.5em;
+    -ms-border-radius: 1.5em;
+    -o-border-radius: 1.5em;
+    transition: padding .5s ease-out;
+    -webkit-transition: padding .5s ease-out;
+    -moz-transition: padding .5s ease-out;
+    -ms-transition: padding .5s ease-out;
+    -o-transition: padding .5s ease-out;
+}
+
+.objetivos-card p {
+    margin: 1em;
+    font-weight: bold;
+}
+
+.p-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-objetivo{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 1.5em;
+    -webkit-border-radius: 1.5em;
+    -moz-border-radius: 1.5em;
+    -ms-border-radius: 1.5em;
+    -o-border-radius: 1.5em;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.objetivos-card:hover{
+    padding: 2em;
+    transition: padding .5s ease-in;
+    -webkit-transition: padding .5s ease-in;
+    -moz-transition: padding .5s ease-in;
+    -ms-transition: padding .5s ease-in;
+    -o-transition: padding .5s ease-in;
+}
+
+@media (max-width: 1280px) {
+    .objetivos-card{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #content{
+        overflow: hidden;
+    }
+
+    .p-card{
+        width: 80%;
+    }
+}
+
+@media (max-width: 700px) {
+    .p-card{
+        width: 50%;
+    }
+}
